@@ -11,7 +11,7 @@ import { GoldFlourishDivider } from './FloralDecorations';
  * - SAVE THE DATE button generating downloadable .ics calendar file
  * - Direct Google Calendar link
  */
-const TARGET_TIME = new Date('2026-12-28T00:00:00+05:30').getTime();
+const TARGET_TIME = new Date('2027-01-02T00:00:00+05:30').getTime();
 
 export const SaveTheDateSection: React.FC = () => {
   const [downloaded, setDownloaded] = useState(false);
@@ -60,10 +60,10 @@ export const SaveTheDateSection: React.FC = () => {
       {/* Prominent Wedding Date */}
       <div className="my-4 sm:my-5">
         <h2 className="font-serif-luxury text-3xl sm:text-4xl font-normal gold-foil-text tracking-wide drop-shadow-md">
-          28th of December 2026
+          02nd of January 2027
         </h2>
         <p className="font-display-classic text-xs tracking-[0.25em] uppercase text-[#FAF6EE]/80 mt-1">
-          Monday · Negombo, Sri Lanka
+          Saturday · Negombo, Sri Lanka
         </p>
       </div>
 

@@ -15,22 +15,22 @@ export const weddingData: WeddingData = {
   coverMessage:
     'Together with our families, we joyfully invite you to celebrate the beginning of our forever as we unite in holy matrimony.',
   date: {
-    displayDate: 'Monday, 28th of December 2026',
-    displayTime: '8:00 AM',
-    dayOfWeek: 'Monday',
-    year: '2026',
-    targetTimestamp: new Date('2026-12-28T08:00:00+05:30').getTime(),
+    displayDate: 'Saturday, 02nd of January 2027',
+    displayTime: '7:00 PM',
+    dayOfWeek: 'Saturday',
+    year: '2027',
+    targetTimestamp: new Date('2027-01-02T19:00:00+05:30').getTime(),
   },
   venue: {
-    name: 'Auric Grand Ballroom',
+    name: 'Avenra Garden Hotel Negombo',
     subheading: 'Negombo, Sri Lanka',
     city: 'Negombo',
     country: 'Sri Lanka',
-    address: 'Golden Star Beach Hotel, Lewis Place, Negombo, Sri Lanka',
+    address: 'ARENA ARTORIUM, Avenra Garden Hotel, Negombo, Sri Lanka',
     description:
-      'Celebration venue located along the coastal shores of Negombo, Sri Lanka.',
+      'Homecoming celebration venue in Negombo, Sri Lanka.',
     coordinates: '7.2079° N, 79.8227° E',
-    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Auric+Grand+Ballroom+Golden+Star+Beach+Hotel+Negombo+Sri+Lanka',
+    googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Avenra+Garden+Hotel+Negombo+Sri+Lanka',
   },
   ceremony: {
     time: '8:00 AM',
@@ -39,10 +39,10 @@ export const weddingData: WeddingData = {
     notes: 'Please be seated by 7:45 AM before the processional begins.',
   },
   reception: {
-    time: '12:00 PM',
-    location: 'Auric Grand Ballroom, Negombo',
-    description: 'We warmly invite you to join us in celebrating our special day with luncheon, toasts, and music.',
-    notes: 'Commencing at 12:00 PM following the church ceremony.',
+    time: '7:00 PM',
+    location: 'Avenra Garden Hotel Negombo – ARENA ARTORIUM',
+    description: 'We warmly invite you to join us in celebrating our special day.',
+    notes: 'Commencing at 7:00 PM at ARENA ARTORIUM.',
   },
   schedule: [
     {

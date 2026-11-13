@@ -50,7 +50,7 @@ export const ThankYouSection: React.FC = () => {
       <div className="mt-8 flex items-center justify-center gap-2 text-xs text-[#FAF6EE]/75 font-serif-luxury">
         <span className="h-[0.5px] w-6 bg-[#ECC880]/40" />
         <Heart className="w-3 h-3 text-[#ECC880]" />
-        <span>28 · 12 · 2026</span>
+        <span>02 · 01 · 2027</span>
         <Heart className="w-3 h-3 text-[#ECC880]" />
         <span className="h-[0.5px] w-6 bg-[#ECC880]/40" />
       </div>

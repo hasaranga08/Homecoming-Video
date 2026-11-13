@@ -79,7 +79,7 @@ export const RsvpSection: React.FC = () => {
     const finalMessage = wishes.trim() ? wishes.trim() : 'None';
 
     return [
-      'Wedding RSVP – Hasaranga & Roshini',
+      'Homecoming RSVP – Hasaranga & Roshini',
       '',
       `Guest Name: ${name.trim()}`,
       '',
@@ -89,7 +89,7 @@ export const RsvpSection: React.FC = () => {
       '',
       `Message: ${finalMessage}`,
       '',
-      'Wedding Date: 28th December 2026',
+      'Wedding Date: 02nd of January 2027',
     ].join('\n');
   };
 

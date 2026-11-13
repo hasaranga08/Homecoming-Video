@@ -18,7 +18,7 @@ export const WeddingIntroduction: React.FC = () => {
       {/* Editorial Kicker */}
       <div className="space-y-1 mb-4">
         <p className="font-display-classic text-[11px] tracking-[0.32em] uppercase text-[#E2BE76] font-semibold">
-          THE WEDDING CELEBRATION OF
+          THE HOMECOMING CELEBRATION OF
         </p>
       </div>
 

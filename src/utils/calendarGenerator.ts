@@ -1,8 +1,8 @@
 /**
- * Calendar generation utility for Hasaranga & Roshini's Wedding
- * Date: 28th of December 2026
- * Time: 8:00 AM Asia/Colombo (UTC+05:30)
- * Duration: Configurable (default 10 hours)
+ * Calendar generation utility for Hasaranga & Roshini's Homecoming
+ * Date: 02nd of January 2027
+ * Time: 7:00 PM Asia/Colombo (UTC+05:30)
+ * Duration: Configurable (default 5 hours)
  */
 
 export interface WeddingCalendarEvent {
@@ -14,21 +14,17 @@ export interface WeddingCalendarEvent {
 }
 
 export const WEDDING_EVENT_DETAILS = {
-  title: 'Hasaranga & Roshini – Wedding',
-  description: `Church Ceremony:
-Our Lady of Good Voyage Church – Duwa
-Date: 28th December 2026
-Time: 8:00 AM
-
-Reception Invitation:
-Auric Grand Ballroom, Negombo
-Date: 28th December 2026
-Time: 12:00 PM
+  title: 'Hasaranga & Roshini – Homecoming',
+  description: `Homecoming Invitation:
+Avenra Garden Hotel Negombo
+ARENA ARTORIUM
+Date: 02nd of January 2027
+Time: 7:00 PM
 
 We warmly invite you to join us in celebrating our special day!`,
-  location: 'Our Lady of Good Voyage Church, Duwa, Negombo & Auric Grand Ballroom, Negombo, Sri Lanka',
-  startDate: '2026-12-28T08:00:00+05:30',
-  durationHours: 10,
+  location: 'ARENA ARTORIUM, Avenra Garden Hotel Negombo, Sri Lanka',
+  startDate: '2027-01-02T19:00:00+05:30',
+  durationHours: 5,
 };
 
 /**
@@ -36,12 +32,12 @@ We warmly invite you to join us in celebrating our special day!`,
  */
 export function downloadWeddingIcsFile(): void {
   // Asia/Colombo is UTC+05:30.
-  // 08:00 AM on 2026-12-28 in Asia/Colombo = 02:30 AM UTC on 2026-12-28.
-  // 10 hours later = 18:00 (6:00 PM) Asia/Colombo = 12:30 PM UTC.
+  // 07:00 PM on 2027-01-02 in Asia/Colombo = 13:30 UTC on 2027-01-02.
+  // 5 hours later = 12:00 AM (00:00) on 2027-01-03 Asia/Colombo = 18:30 UTC on 2027-01-02.
   const icsContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Hasaranga & Roshini Wedding//EN',
+    'PRODID:-//Hasaranga & Roshini Homecoming//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VTIMEZONE',
@@ -55,13 +51,13 @@ export function downloadWeddingIcsFile(): void {
     'END:STANDARD',
     'END:VTIMEZONE',
     'BEGIN:VEVENT',
-    'UID:hasaranga-roshini-wedding-20261228@wedding',
-    'DTSTAMP:20261228T080000Z',
-    'DTSTART;TZID=Asia/Colombo:20261228T080000',
-    'DTEND;TZID=Asia/Colombo:20261228T180000',
-    'SUMMARY:Hasaranga & Roshini – Wedding',
-    'DESCRIPTION:Church Ceremony:\\nOur Lady of Good Voyage Church – Duwa\\nTime: 8:00 AM\\n\\nReception Invitation:\\nAuric Grand Ballroom\\, Negombo\\nTime: 12:00 PM\\n\\nWe warmly invite you to join us in celebrating our special day!',
-    'LOCATION:Our Lady of Good Voyage Church\\, Duwa\\, Negombo & Auric Grand Ballroom\\, Negombo',
+    'UID:hasaranga-roshini-homecoming-20270102@wedding',
+    'DTSTAMP:20270102T190000Z',
+    'DTSTART;TZID=Asia/Colombo:20270102T190000',
+    'DTEND;TZID=Asia/Colombo:20270103T000000',
+    'SUMMARY:Hasaranga & Roshini – Homecoming',
+    'DESCRIPTION:Homecoming Invitation:\\nAvenra Garden Hotel Negombo\\nARENA ARTORIUM\\nDate: 02nd of January 2027\\nTime: 7:00 PM\\n\\nWe warmly invite you to join us in celebrating our special day!',
+    'LOCATION:ARENA ARTORIUM\\, Avenra Garden Hotel Negombo\\, Sri Lanka',
     'STATUS:CONFIRMED',
     'TRANSP:OPAQUE',
     'END:VEVENT',
@@ -72,7 +68,7 @@ export function downloadWeddingIcsFile(): void {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.setAttribute('download', 'Hasaranga_and_Roshini_Wedding.ics');
+  link.setAttribute('download', 'Hasaranga_and_Roshini_Homecoming.ics');
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -83,16 +79,16 @@ export function downloadWeddingIcsFile(): void {
  * Returns a web link to create the event in Google Calendar
  */
 export function getGoogleCalendarUrl(): string {
-  // Start: 20261228T023000Z (8:00 AM Asia/Colombo)
-  // End: 20261228T123000Z (6:00 PM Asia/Colombo)
-  const text = encodeURIComponent('Hasaranga & Roshini – Wedding');
+  // Start: 20270102T133000Z (7:00 PM Asia/Colombo)
+  // End: 20270102T183000Z (12:00 AM Asia/Colombo)
+  const text = encodeURIComponent('Hasaranga & Roshini – Homecoming');
   const details = encodeURIComponent(
-    'Church Ceremony:\nOur Lady of Good Voyage Church – Duwa (8:00 AM)\n\nReception Invitation:\nAuric Grand Ballroom, Negombo (12:00 PM)\n\nWe warmly invite you to join us in celebrating our special day!'
+    'Homecoming Invitation:\nAvenra Garden Hotel Negombo\nARENA ARTORIUM\nDate: 02nd of January 2027\nTime: 7:00 PM\n\nWe warmly invite you to join us in celebrating our special day!'
   );
   const location = encodeURIComponent(
-    'Our Lady of Good Voyage Church, Duwa, Negombo & Auric Grand Ballroom, Negombo, Sri Lanka'
+    'ARENA ARTORIUM, Avenra Garden Hotel Negombo, Sri Lanka'
   );
-  const dates = '20261228T023000Z/20261228T123000Z';
+  const dates = '20270102T133000Z/20270102T183000Z';
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}`;
 }
